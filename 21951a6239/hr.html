@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR New Hiring Process</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset some default styles */
+body, h1, h2, p, form, label, input, button, ol, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #033344;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Main Sections Styles */
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hiring Process Steps Styles */
+#hiring-process-steps ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+}
+
+#hiring-process-steps li {
+    margin-bottom: 10px;
+}
+
+/* Form Styles */
+#applicant-form form {
+    display: grid;
+    grid-gap: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, button {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+button {
+    background-color: #033344;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Result Section Styles */
+#result-section {
+    display: none; /* Initially hidden */
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <h1>HR New Hiring Process</h1>
+</header>
+
+<!-- Hiring Process Steps Section -->
+<section id="hiring-process-steps">
+    <h2>Hiring Process Steps</h2>
+    <ol>
+        <li>Applicant submits Resume with opportunity ID via email.</li>
+        <li>Email content is extracted and stored.</li>
+        <li>Opportunity ID is sent to respective HR (Finance, IM, etc.).</li>
+        <li>HR verifies the resume; if shortlisted, forwards it to respective Managers.</li>
+        <li>Manager schedules the interview & assigns a team member to perform the interview.</li>
+        <li>Interviewer conducts the interview & updates the results.</li>
+        <li>Manager updates based on the results.</li>
+        <li>HR sends out the offer letter if selected.</li>
+        <li>Applicant responds with Acceptance/Rejection subject line.</li>
+        <li>On Rejection, the process ends. On Acceptance, a new employee ID/mail-id is generated, and the process ends.</li>
+    </ol>
+</section>
+
+<!-- Interactive Form Section (JavaScript) -->
+<section id="applicant-form">
+    <h2>Applicant Submission Form</h2>
+    <form id="submission-form">
+        <!-- Add form fields for applicant information, opportunity ID, etc. -->
+        <label for="resume">Upload Resume:</label>
+        <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx">
+
+        <label for="opportunity-id">Opportunity ID:</label>
+        <input type="text" id="opportunity-id" name="opportunity-id" required>
+
+        <!-- Add more form fields as needed -->
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+</section>
+
+<!-- Result Section (JavaScript) -->
+<section id="result-section">
+    <!-- Add a section to display the result of the hiring process -->
+    <h2>Process Result</h2>
+    <p id="process-result"></p>
+</section>
+
+<!-- Interactive Controls (JavaScript) -->
+<script>
+    function submitForm() {
+        document.getElementById("signup-form").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent the default form submission
+  
+  // Extract form values
+  var username = document.getElementById("username").value;
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+  
+  // Perform validation
+  if (!username || !email || !password) {
+    // If any field is empty, display an error message
+    displayResult("Please fill in all fields.", "error");
+    return;
+  }
+  
+  // Perform additional validation if needed (e.g., email format)
+  
+  // If validation passes, proceed with form processing
+  // For demonstration purposes, log the form data
+  console.log("Username: ", username);
+  console.log("Email: ", email);
+  console.log("Password: ", password);
+  
+  // Simulate form processing (replace with actual backend logic)
+  setTimeout(function() {
+    // Simulate a successful signup
+    displayResult("Sign up successful! Thank you for registering.", "success");
+  }, 1000); // Simulate a delay
+  
+});
+
+// Function to display the result message
+function displayResult(message, type) {
+  var resultSection = document.getElementById("result");
+  resultSection.textContent = message;
+  
+  // Add a class based on the result type for styling
+  resultSection.className = type;
+}
+
+        var resultMessage = "Form submitted successfully!"; // Replace with actual result
+        document.getElementById("process-result").textContent = resultMessage;
+    }
+</script>
+
+<!-- Footer -->
+
+
+</body>
+</html>
+

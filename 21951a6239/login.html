@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login-styles.css"> <!-- Add a separate CSS file for login styles -->
+    <style>
+        /* Add specific styles for the login page */
+body {
+    background-color: #f4f4f4;
+}
+
+#login-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#login-form h2 {
+    color: #0da9dd;
+    margin-bottom: 10px;
+}
+
+#login-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#login-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+#login-form button {
+    background-color: #0da9dd;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <h1> HR OPERATIONS</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="C:\Users\THANMAI\Desktop\html\sign.html">signup</a></li>
+    </ul>
+</nav>
+
+<!-- Login Form Section -->
+<section id="login-form">
+    <h2>Login</h2>
+    <form id="login-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="button" onclick="login()">Login</button>
+    </form>
+</section>
+
+<!-- Main Content Sections (Workflow, Reports, etc.) -->
+
+<!-- Interactive Controls (JavaScript) -->
+<script>
+    // Your existing JavaScript code for the main functionality
+// ...
+
+// Function to handle the login process (replace with actual authentication logic)
+function login() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+
+    // Example: Check if username and password are valid
+    if (username === 'admin' && password === 'password') {
+        alert('Login successful!');
+        // Redirect to the main dashboard or perform other actions
+    } else {
+        alert('Invalid username or password. Please try again.');
+    }
+}
+
+</script>
+<!-- Footer -->
+<footer>
+    <p>&copy;  HR OPERATIONS</p>
+</footer>
+
+</body>
+</html>

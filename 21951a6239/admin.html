@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       /* Add specific styles for the Admin page */
+/* You may use additional CSS styles for form layout and design */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+header {
+    background-color:#033344;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+#data-management {
+    margin-top: 20px;
+}
+
+#data-management h2 {
+    color: #333;
+}
+
+#data-management-form {
+    margin-bottom: 20px;
+}
+
+#data-management-form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+#data-management-form textarea {
+    width: 100%;
+    padding: 8px;
+}
+
+#data-management-form button {
+    background-color: #0da9dd;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#data-management-form button:hover {
+    background-color: #0da9dd;
+}
+
+#report-generation,
+#pictorial-depiction {
+    margin-top: 20px;
+}
+
+#report-generation h2,
+#pictorial-depiction h2 {
+    color: #333;
+}
+
+#report-generation button,
+#pictorial-depiction button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+nav {
+    margin: 20px;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #050A30;
+    font-weight: bold;
+}
+
+
+#report-generation button:hover,
+#pictorial-depiction button:hover {
+    background-color: #2980b9;
+}
+
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <h1>Admin Page</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="admin.html">Admin Dashboard</a></li>
+        <li><a href="hr.html">HR Hiring Process</a></li>
+        <li><a href="re.html">Reports</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="work.html">Workflow</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><a href="about.html">About Us</a></li>
+    </ul>
+</nav>
+
+<!-- Data Management Section -->
+<section id="data-management">
+    <h2>Data Management</h2>
+    <!-- Add form elements for managing data (add, edit, delete) -->
+    <form id="data-management-form">
+        <label for="data">Data:</label>
+        <textarea id="data" name="data" rows="4" cols="50" placeholder="Enter data..."></textarea>
+
+        <!-- Add more form fields for data management options as needed -->
+
+        <button type="button" onclick="manageData()">Manage Data</button>
+    </form>
+</section>
+
+<!-- Report Generation Section (JavaScript) -->
+<section id="report-generation">
+    <h2>Report Generation</h2>
+    <p>Download Report.</p>
+    <button type="button" onclick="generateAdminReport()">Download Report</button>
+</section>
+
+<!-- Pictorial Depiction Section (JavaScript) -->
+<section id="pictorial-depiction">
+    <h2>Pictorial Depiction</h2>
+    <p>Make a pictorial depiction of data in Excel sheets for better understanding.</p>
+    <button type="button" onclick="generateAdminPictorialDepiction()">Generate Pictorial Depiction</button>
+</section>
+
+<!-- Interactive Controls (JavaScript) -->
+<script>
+    function manageData() {
+        window.alert("Data Stored Successfully!!")
+    }
+
+    function generateAdminReport() {
+        window.confirm("Do you want to Download report");
+
+        window.open("data saved successfully");
+    }
+
+   
+
+</script>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Your Company Name</p>
+</footer>
+
+</body>
+</html>

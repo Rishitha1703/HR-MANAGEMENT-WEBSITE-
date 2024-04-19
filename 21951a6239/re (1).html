@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+       /* Add specific styles for the Reports page */
+/* You may use additional CSS styles for report layout and design */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #034358;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+}
+
+#report-customization,
+#report-display,
+#download-report,
+#pictorial-depiction {
+    margin-top: 20px;
+}
+
+#report-customization h2,
+#report-display h2,
+#download-report h2,
+#pictorial-depiction h2 {
+    color: #034358;
+}
+
+#report-customization form {
+    margin-bottom: 20px;
+}
+
+#report-customization label {
+    display: block;
+    margin-bottom: 8px;
+    color: #034358;
+}
+
+#report-customization input[type="date"] {
+    padding: 8px;
+}
+
+#report-customization button,
+#download-report button,
+#pictorial-depiction button {
+    background-color: #0da9dd;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#report-customization button:hover,
+#download-report button:hover,
+#pictorial-depiction button:hover {
+    background-color: #0b8ac6;
+}
+
+#report {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+#report th,
+#report td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+#report th {
+    background-color: #f2f2f2;
+}
+
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <h1>Reports Page</h1>
+</header>
+
+<!-- Report Customization Section -->
+<section id="report-customization">
+    <h2>Report Customization</h2>
+    <p>Customize the stored data in a platform-independent format using style sheets.</p>
+    <!-- Add form elements for report customization options (date range, filters, etc.) -->
+    <form id="customization-form">
+        <label for="date-range">Select Date Range:</label>
+        <input type="date" id="start-date" name="start-date" required>
+        <input type="date" id="end-date" name="end-date" required>
+       
+        <!-- Add more customization options as needed -->
+
+        <button type="button" onclick="generateReport()">Generate Report</button>
+    </form>
+</section>
+
+<!-- Report Display Section (JavaScript) -->
+<section id="report-display">
+    <h2>Report Display</h2>
+    <!-- Display the generated report using HTML and CSS -->
+    <div id="generated-report">
+        <!-- The report content will be dynamically added here using JavaScript -->
+    </div>
+</section>
+
+<!-- Download Report Section (JavaScript) -->
+<section id="download-report">
+    <h2>Download Report</h2>
+    <p>Admin can download the report data in Excel sheets.</p>
+    <button type="button" onclick="downloadExcel()">Download Excel</button>
+</section>
+
+<!-- Pictorial Depiction Section (JavaScript) -->
+<section id="pictorial-depiction">
+    <h2>Pictorial Depiction</h2>
+    <p>Admin can make a pictorial depiction of data in Excel sheets for better understanding.</p>
+    <button type="button" onclick="generatePictorialDepiction()">Generate Pictorial Depiction</button>
+</section>
+
+<!-- Interactive Controls (JavaScript) -->
+<script>
+    function generateReport() {
+        window.alert("REPORT GENERATED SUCCESSFULLY");
+    }
+
+    function downloadExcel() {
+        window.confirm("Do you want to Download report");
+
+       window.open("data saved successfully");
+    }
+
+    function generatePictorialDepiction() {
+        // Add JavaScript logic to generate a pictorial depiction of the data
+        // You may use charting libraries or other technologies for visualization
+    }
+</script>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Your Company Name</p>
+</footer>
+
+</body>
+</html>
